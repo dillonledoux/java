@@ -294,6 +294,9 @@ class MouseSensor extends MouseAdapter {
                         if((panel.getGridSpaces()[i][k].getXCoor() == x) && (panel.getGridSpaces()[i][k].getYCoor() == y)) {
                             if(panel.getField().isMinedSpace(x, y)){
                                 panel.getGridSpaces()[i][k].setText("BOMB");
+                                panel.getGridSpaces()[i][k].setBackground(Color.red);
+                                panel.getGridSpaces()[i][k].setOpaque(true);
+                                panel.getGridSpaces()[i][k].setBorderPainted(false);
                             }
                              else{
                                 panel.getGridSpaces()[i][k].setText(Integer.toString(panel.getField().getSpaceValue(x, y)));
@@ -308,6 +311,9 @@ class MouseSensor extends MouseAdapter {
                         for(int k = 0; k<panel.getGridSpaces().length; k++){
                             if(panel.getField().isMinedSpace(i, k)){
                                 panel.getGridSpaces()[i][k].setText("BOMB");
+                                panel.getGridSpaces()[i][k].setBackground(Color.red);
+                                panel.getGridSpaces()[i][k].setOpaque(true);
+                                panel.getGridSpaces()[i][k].setBorderPainted(true);
                                 }
                             else{
                                panel.getGridSpaces()[i][k].setText(Integer.toString(panel.getField().getSpaceValue(i, k))); 

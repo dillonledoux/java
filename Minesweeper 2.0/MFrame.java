@@ -15,7 +15,7 @@ public class MFrame extends JFrame{
 
     public MFrame(MineField field){
         setTitle("Minesweeper - " +getGameDiff());
-        setSize(600, 600);
+        setSize(800, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         MPanel panel = new MPanel(field, this);
